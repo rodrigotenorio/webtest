@@ -1,0 +1,12 @@
+<project name="webtest">
+
+	<property name="deploy_dir" value="/VirtualMachines/rtenorio/jbdevstudio/runtimes/jboss-eap/standalone/deployments" />
+
+	<target name="deploy">
+		<copy todir="${deploy_dir}" file="target/webtest.war" />
+	</target>
+
+	<target name="undeploy">
+		<delete file="${deploy_dir}/webtest.war" />
+	</target>
+</project>
